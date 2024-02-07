@@ -1,7 +1,7 @@
 
 // playground
-import { sum } from '@myscope/servicea'
-// import { four } from '@myscope/servicec'
-import { four } from '@myscope/servicec'
-import { five } from '@myscope/serviceb'
+import { sum } from '@myscope/packagea'
+// import { four } from '@myscope/packagec'
+import { four } from '@myscope/packagec'
+import { five } from '@myscope/packageb'
 console.log(sum(four, five))

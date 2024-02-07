@@ -1,7 +1,7 @@
 'use strict'
 
-const serviceA = require('..')
+const packageA = require('..')
 
-describe('serviceA', () => {
+describe('packageA', () => {
   it('needs tests')
 })

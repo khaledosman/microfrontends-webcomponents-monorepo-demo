@@ -61,15 +61,18 @@
     "resolveJsonModule": true, /* Include modules imported with '.json' extension */
     "forceConsistentCasingInFileNames": true, /* Disallow inconsistently-cased references to the same file. */
     "paths": {
-      "@myscope/servicea*": [
-        "packages/serviceA/src"
+      "@myscope/packagea*": [
+        "packages/packageA/src"
       ],
-      "@myscope/serviceb*": [
-        "packages/serviceB/src"
+      "@myscope/packageb*": [
+        "packages/packageB/src"
       ],
-      "@myscope/servicec*": [
-        "packages/serviceC/src"
+      "@myscope/packagec*": [
+        "packages/packageC/src"
       ],
+      "@myscope/components-library*": [
+        "packages/vue-web-components-library/src"
+      ]
     }
   },
   "exclude": [

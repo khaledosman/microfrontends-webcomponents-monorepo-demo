@@ -1,2 +1,2 @@
-import { sum } from '@myscope/serviceA'
+import { sum } from '@myscope/packageA'
 export const five = sum(3, 2)

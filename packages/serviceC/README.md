@@ -1,11 +1,11 @@
-# `serviceC`
+# `packageC`
 
 > TODO: description
 
 ## Usage
 
 ```
-const serviceC = require('serviceC');
+const packageC = require('packageC');
 
 // TODO: DEMONSTRATE API
 ```
