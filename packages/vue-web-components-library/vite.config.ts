@@ -6,11 +6,23 @@ import vue from '@vitejs/plugin-vue'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    vue(),
+    vue({
+      template: {
+        compilerOptions: {
+          isCustomElement: (tag) => tag.includes('counter-element')
+        }
+      }
+    })
   ],
-  resolve: {
-    alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
+  build: {
+    lib: {
+      entry: './src/index.ts',
+      name: 'counter-element',
+      // the proper extensions will be added
+      fileName: 'counter-element'
     }
+  },
+  define: {
+    'process.env': process.env
   }
 })
