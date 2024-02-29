@@ -9,17 +9,17 @@ export default defineConfig({
     vue({
       template: {
         compilerOptions: {
-          isCustomElement: (tag) => tag.includes('counter-element')
-        }
+          // treat all tags with a dash as custom elements
+          isCustomElement: (tag) => tag.includes('-')        }
       }
     })
   ],
   build: {
     lib: {
       entry: './src/index.ts',
-      name: 'counter-element',
+      name: 'shared-components',
       // the proper extensions will be added
-      fileName: 'counter-element'
+      fileName: 'shared-components'
     }
   },
   define: {

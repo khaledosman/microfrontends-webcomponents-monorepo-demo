@@ -1,7 +1,8 @@
 <template>
-  <div>
-    Counter component {{ count }}
-    <button @click="increment">Increment</button>
+  <div class="counter-wrapper">
+    <h3>Shared Counter component </h3>
+    <p>Count: {{ counter }}</p>
+    <button type="button" class="button" @click="increment">Increment</button>
   </div>
 </template>
 
@@ -9,13 +10,21 @@
 import { ref } from 'vue'
 export default {
   name: 'Counter-Element',
-  setup() {
-    const count = ref(0)
+  props: {
+    count: {
+      type: Number,
+      default: 0
+    }
+  },
+  emits: ['increment'],
+  setup(props, { emit }) {
+    const counter = ref(props.count)
     const increment = () => {
-      count.value++
+      counter.value++
+      emit('increment')
     }
     return {
-      count,
+      counter,
       increment
     }
 }
@@ -23,5 +32,13 @@ export default {
 </script>
 
 <style scoped>
+.counter-wrapper {
+  border: solid 2px green;
+  display: flex;
+  flex-direction: column;
+}
 
+.button {
+  /* background: pink; */
+}
 </style>
